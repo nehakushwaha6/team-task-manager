@@ -10,7 +10,7 @@ export const AuthProvider = ({ children }) => {
 
   // Axios instance
   const api = axios.create({
-    baseURL: 'http://localhost:8000/apiteam-task-manager-production-9f27.up.railway.app', // Adjust base URL as needed
+    baseURL: 'https://team-task-manager-production-9f27.up.railway.app/api', 
   });
 
   // Interceptor to add token to requests
@@ -43,7 +43,8 @@ export const AuthProvider = ({ children }) => {
     formData.append('username', email); // OAuth2 expects 'username'
     formData.append('password', password);
 
-    const res = await axios.post('http://localhost:8000/api/token', formData, {
+    // Using the 'api' instance here so it uses the correct baseURL
+    const res = await api.post('/token', formData, {
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
     });
 
@@ -53,7 +54,8 @@ export const AuthProvider = ({ children }) => {
   };
 
   const signup = async (name, email, password, role) => {
-    await axios.post('http://localhost:8000/api/signup', {
+    // Using the 'api' instance here so it uses the correct baseURL
+    await api.post('/signup', {
       name, email, password, role
     });
     // Auto login after signup
