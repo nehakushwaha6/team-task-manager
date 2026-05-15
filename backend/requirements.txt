@@ -5,3 +5,4 @@ pymysql
 passlib[bcrypt]
 pyjwt
 python-dotenv
+email-validator

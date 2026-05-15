@@ -10,6 +10,10 @@ load_dotenv()
 # A MySQL connection string would look like: mysql+pymysql://user:password@localhost/dbname
 SQLALCHEMY_DATABASE_URL = os.getenv("DATABASE_URL", "sqlite:///./sql_app.db")
 
+# Railway provides mysql://, but SQLAlchemy needs mysql+pymysql://
+if SQLALCHEMY_DATABASE_URL.startswith("mysql://"):
+    SQLALCHEMY_DATABASE_URL = SQLALCHEMY_DATABASE_URL.replace("mysql://", "mysql+pymysql://", 1)
+
 # For SQLite, we need connect_args={"check_same_thread": False}.
 # For MySQL, we don't need this.
 if SQLALCHEMY_DATABASE_URL.startswith("sqlite"):
