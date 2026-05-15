@@ -10,7 +10,7 @@ export const AuthProvider = ({ children }) => {
 
   // Axios instance
   const api = axios.create({
-    baseURL: 'http://localhost:8000/api', // Adjust base URL as needed
+    baseURL: 'http://localhost:8000/apiteam-task-manager-production-9f27.up.railway.app', // Adjust base URL as needed
   });
 
   // Interceptor to add token to requests
@@ -46,7 +46,7 @@ export const AuthProvider = ({ children }) => {
     const res = await axios.post('http://localhost:8000/api/token', formData, {
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
     });
-    
+
     const newToken = res.data.access_token;
     setToken(newToken);
     localStorage.setItem('token', newToken);
