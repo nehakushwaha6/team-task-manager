@@ -21,6 +21,10 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+@app.get("/")
+def read_root():
+    return {"message": "Team Task Manager API is running!"}
+
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
 
 # --- Dependency ---
