@@ -10,7 +10,7 @@ export const AuthProvider = ({ children }) => {
 
   // Axios instance
   const api = axios.create({
-    baseURL: 'https://team-task-manager-production-9f27.up.railway.app/api', 
+    baseURL: 'http://127.0.0.1:8000/api', 
   });
 
   // Interceptor to add token to requests
