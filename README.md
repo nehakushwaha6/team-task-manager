@@ -1,15 +1,56 @@
 # Team Task Manager
 
-**Live Application:** [https://team-task-manager-front-production.up.railway.app/](https://team-task-manager-front-production.up.railway.app/)
-**GitHub Repository:** [https://github.com/anisha90-svg/team-task-manager](https://github.com/anisha90-svg/team-task-manager)
+A full-stack Task Management System where users can create projects, assign tasks, and track progress with role-based access.(Admin/Member).
+## 📌 Features
 
-A full-stack web application for team task management with role-based access control (Admin/Member).
+✅ User Authentication (Signup/Login)  
+✅ Role-based Access (Admin / Member)  
+✅ Project Management  
+✅ Task Creation & Assignment  
+✅ Task Status Tracking (Pending / In Progress / Completed)  
+✅ Dashboard with Task Overview  
+✅ Overdue Task Tracking  
+✅ Responsive UI 
 
-## Tech Stack
-*   **Frontend**: React (Vite), React Router, Axios, Vanilla CSS
-*   **Backend**: Python, FastAPI, SQLAlchemy, PyJWT
-*   **Database**: MySQL (Defaulting to SQLite locally for easy setup)
+## 🛠️ Tech Stack
 
+### 🔹 Frontend
+- React.js (Vite)
+- Context API
+- Axios
+- CSS / Tailwind
+
+### 🔹 Backend
+- FastAPI (Python)
+- REST APIs
+- JWT Authentication
+
+### 🔹 Database
+- MySQL (Railway)
+
+---
+## 📂 Project Structure
+
+
+team-task-manager/
+│
+├── backend/ # FastAPI Backend
+│ ├── main.py
+│ ├── models/
+│ ├── routes/
+│ ├── database/
+│ └── requirements.txt
+│
+├── frontend/ # React Frontend
+│ ├── src/
+│ ├── components/
+│ ├── context/
+│ └── package.json
+│
+└── README.md
+
+
+---
 ## Local Development
 
 ### 1. Backend Setup
@@ -49,6 +90,9 @@ This project is structured to be deployed easily on Railway. You can deploy the 
 ## Features implemented
 *   Signup & Login with JWT Authentication.
 *   Role-Based Access Control (Admin vs Member).
+
+  **Live Application:** [https://team-task-manager-front-production.up.railway.app/](https://team-task-manager-front-production.up.railway.app/)
+**GitHub Repository:** [https://github.com/nehakushwaha6/team-task-manager](https://github.com/nehakushwaha6/team-task-manager))
 *   Projects CRUD (Admin).
 *   Task Assignment & Tracking.
 *   Responsive Dashboard UI with glassmorphism design.
